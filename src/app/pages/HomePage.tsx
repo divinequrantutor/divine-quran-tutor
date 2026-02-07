@@ -110,14 +110,12 @@ export function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 sm:py-28">
-        <div className="absolute inset-0">
-          <div
-            className="h-full w-full bg-cover bg-center opacity-35"
-            style={{ backgroundImage: heroBackgroundImage }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/80 to-background/85" />
-        </div>
+      <section
+        className="relative overflow-hidden bg-cover bg-center py-20 sm:py-28"
+        style={{
+          backgroundImage: `linear-gradient(rgba(250, 248, 244, 0.55), rgba(250, 248, 244, 0.55)), ${heroBackgroundImage}`,
+        }}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -290,14 +288,12 @@ export function HomePage() {
       </section>
 
       {/* Tutors & Safety */}
-      <section className="relative overflow-hidden py-20 bg-background">
-        <div className="absolute inset-0">
-          <div
-            className="h-full w-full bg-cover bg-center opacity-20"
-            style={{ backgroundImage: tutorBackgroundImage }}
-          />
-          <div className="absolute inset-0 bg-background/80" />
-        </div>
+      <section
+        className="relative overflow-hidden py-20 bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(248, 247, 243, 0.68), rgba(248, 247, 243, 0.68)), ${tutorBackgroundImage}`,
+        }}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -465,14 +461,12 @@ export function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-primary to-primary/80">
-        <div className="absolute inset-0">
-          <div
-            className="h-full w-full bg-cover bg-center opacity-35"
-            style={{ backgroundImage: ctaBackgroundImage }}
-          />
-          <div className="absolute inset-0 bg-primary/55" />
-        </div>
+      <section
+        className="relative overflow-hidden py-20 bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(8, 82, 57, 0.66), rgba(8, 82, 57, 0.66)), ${ctaBackgroundImage}`,
+        }}
+      >
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

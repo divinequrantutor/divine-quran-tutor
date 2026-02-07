@@ -142,14 +142,12 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
-        <div className="absolute inset-0">
-          <div
-            className="h-full w-full bg-cover bg-center opacity-28"
-            style={{ backgroundImage: heroBackgroundImage }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/80 to-background/85" />
-        </div>
+      <section
+        className="relative overflow-hidden bg-cover bg-center py-16 sm:py-20"
+        style={{
+          backgroundImage: `linear-gradient(rgba(250, 248, 244, 0.58), rgba(250, 248, 244, 0.58)), ${heroBackgroundImage}`,
+        }}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
