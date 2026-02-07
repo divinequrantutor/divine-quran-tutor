@@ -113,10 +113,10 @@ export function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 sm:py-28">
         <div className="absolute inset-0">
           <div
-            className="h-full w-full bg-cover bg-center opacity-20"
+            className="h-full w-full bg-cover bg-center opacity-35"
             style={{ backgroundImage: heroBackgroundImage }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/80 to-background/85" />
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -293,10 +293,10 @@ export function HomePage() {
       <section className="relative overflow-hidden py-20 bg-background">
         <div className="absolute inset-0">
           <div
-            className="h-full w-full bg-cover bg-center opacity-10"
+            className="h-full w-full bg-cover bg-center opacity-20"
             style={{ backgroundImage: tutorBackgroundImage }}
           />
-          <div className="absolute inset-0 bg-background/90" />
+          <div className="absolute inset-0 bg-background/80" />
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -468,10 +468,10 @@ export function HomePage() {
       <section className="relative overflow-hidden py-20 bg-gradient-to-br from-primary to-primary/80">
         <div className="absolute inset-0">
           <div
-            className="h-full w-full bg-cover bg-center opacity-20"
+            className="h-full w-full bg-cover bg-center opacity-35"
             style={{ backgroundImage: ctaBackgroundImage }}
           />
-          <div className="absolute inset-0 bg-primary/70" />
+          <div className="absolute inset-0 bg-primary/55" />
         </div>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

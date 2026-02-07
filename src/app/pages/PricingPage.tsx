@@ -94,10 +94,10 @@ export function PricingPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
         <div className="absolute inset-0">
           <div
-            className="h-full w-full bg-cover bg-center opacity-15"
+            className="h-full w-full bg-cover bg-center opacity-28"
             style={{ backgroundImage: heroBackgroundImage }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/80 to-background/85" />
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
