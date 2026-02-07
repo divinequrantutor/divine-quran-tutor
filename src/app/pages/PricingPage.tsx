@@ -5,6 +5,7 @@ export function PricingPage() {
   const phoneNumber = '61485519322';
   const whatsappMessage = encodeURIComponent('Assalam-o-Alaikum, I want to inquire about pricing plans.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+  const heroBackgroundImage = "url('https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1800&q=80')";
 
   const plans = [
     {
@@ -90,11 +91,19 @@ export function PricingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
+        <div className="absolute inset-0">
+          <div
+            className="h-full w-full bg-cover bg-center opacity-15"
+            style={{ backgroundImage: heroBackgroundImage }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="relative"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Transparent Pricing</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

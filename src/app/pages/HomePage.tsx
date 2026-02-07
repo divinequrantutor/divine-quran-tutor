@@ -6,6 +6,9 @@ export function HomePage() {
   const phoneNumber = '61485519322';
   const whatsappMessage = encodeURIComponent('Assalam-o-Alaikum, I want a free trial class. Please guide me.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+  const heroBackgroundImage = "url('https://images.unsplash.com/photo-1584286595398-a96fb3bb4d6a?auto=format&fit=crop&w=2000&q=80')";
+  const tutorBackgroundImage = "url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1600&q=80')";
+  const ctaBackgroundImage = "url('https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=1800&q=80')";
 
   const testimonials = [
     {
@@ -107,13 +110,20 @@ export function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 sm:py-28">
+        <div className="absolute inset-0">
+          <div
+            className="h-full w-full bg-cover bg-center opacity-20"
+            style={{ backgroundImage: heroBackgroundImage }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="relative text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Learn Quran Online with Qualified Tutors
@@ -280,9 +290,16 @@ export function HomePage() {
       </section>
 
       {/* Tutors & Safety */}
-      <section className="py-20 bg-background">
+      <section className="relative overflow-hidden py-20 bg-background">
+        <div className="absolute inset-0">
+          <div
+            className="h-full w-full bg-cover bg-center opacity-10"
+            style={{ backgroundImage: tutorBackgroundImage }}
+          />
+          <div className="absolute inset-0 bg-background/90" />
+        </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
                 Experienced & Qualified Tutors
@@ -448,12 +465,20 @@ export function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-primary to-primary/80">
+        <div className="absolute inset-0">
+          <div
+            className="h-full w-full bg-cover bg-center opacity-20"
+            style={{ backgroundImage: ctaBackgroundImage }}
+          />
+          <div className="absolute inset-0 bg-primary/70" />
+        </div>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="relative"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
               Start Your Quran Learning Journey Today

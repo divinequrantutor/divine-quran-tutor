@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 
 export function ProgramsPage() {
   const location = useLocation();
+  const heroBackgroundImage = "url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1800&q=80')";
 
   useEffect(() => {
     if (location.hash) {
@@ -141,11 +142,19 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 sm:py-20">
+        <div className="absolute inset-0">
+          <div
+            className="h-full w-full bg-cover bg-center opacity-15"
+            style={{ backgroundImage: heroBackgroundImage }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="relative"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Our Programs</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
